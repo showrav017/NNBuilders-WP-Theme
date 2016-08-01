@@ -5,23 +5,10 @@
 <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <title><?php wp_title("NN Builders Limited"); ?></title>
-    <meta name="description" content="Fastest Growing Real Estate Properties in Bangalore residential segment.SNN Builders has a range of affordable and luxury 1/2/3/4 BHK Flats,Penthouses & Apartments for sale in Bangalore.">
+    <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+    <meta name="description" content="<?php bloginfo('description') ?>">
 
-    <meta name="keywords" content="SNN Builders, 
-    construction companies in bangalore,
-    flats for sale in bangalore,
-    apartments for sale in bangalore,
-    real estate bangalore, 
-    builders in bangalore,
-    real estate developers in bangalore,
-    2 BHK flats in bangalore,
-    2 BHK apartments in bangalore, 
-    Apartments in Bangalore,
-    Flats in Bangalore,
-     Property in Bangalore,
-     top builders in bangalore,
-    luxury homes in bangalore ">
+    <meta name="keywords" content="NN Builders">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" />
     <!-- Define a viewport to mobile devices to use - telling the browser to assume that the page is as wide as the device (width=device-width) and setting the initial page zoom level to be 1 (initial-scale=1.0) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,7 +82,11 @@
                   Start Main Menu-->
                 <nav class="main-menu">
                     <div class="menu-main-menu-container">
-                        <?php wp_nav_menu( array( 'theme_location' => 'Header Menu', 'menu_class'=>'clearfix', 'menu_id'=>'menu-main-menu' ) ); ?>
+                        <?php
+
+                            wp_nav_menu( array( 'menu'=>'Header Menu', 'menu_class'=>'clearfix', 'menu_id'=>'menu-main-menu', 'container'=>"ul" ) );
+
+                        ?>
                     </div>
                 </nav><!-- End Main Menu -->
 
