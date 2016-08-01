@@ -4,12 +4,32 @@
     <div class="flexslider">
         <ul class="slides">
 
+            <?php
 
-            <li> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/temp-images/01_home_banner.jpg" alt="Real Estate Property Developers in Bangalore-SNN Builders Banner"></a> </li>
-            <li> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/temp-images/02_home_banner.jpg" alt="Real Estate Property Developers in Bangalore-SNN Builders Banner"></a> </li>
-            <li> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/temp-images/03_home_banner.jpg" alt="Real Estate Property Developers in Bangalore-SNN Builders Banner"></a> </li>
-            <li> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/temp-images/04_home_banner.jpg" alt="Real Estate Property Developers in Bangalore-SNN Builders Banner"></a> </li>
-            <li> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/temp-images/05_home_banner.jpg" alt="Real Estate Property Developers in Bangalore-SNN Builders Banner"></a> </li>
+
+            $args = array('category' => 4);
+
+            $myposts = get_posts( $args );
+
+            foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+                <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                <li>
+                    <a href="<?php echo $post->guid; ?>"><img src="<?php echo $image[0]; ?>" alt="Real Estate Property Developers in Bangalore-SNN Builders Banner"></a>
+
+                    <!--
+
+                    post_title
+                    post_content
+
+                    -->
+
+                </li>
+                <?php endif; ?>
+
+            <?php endforeach;
+            wp_reset_postdata();?>
 
         </ul>
     </div>
