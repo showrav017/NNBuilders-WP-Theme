@@ -46,6 +46,11 @@
 </head>
 <body>
 
+<?php
+
+$ThemeOption=get_option('my_option_name');
+?>
+
 <div class="header-wrapper">
 
     <div class="container"><!-- Start Header Container -->
@@ -58,7 +63,7 @@
                     <i class="email"></i><a href="mailto:projects@snnbuilders.com">projects@snnbuilders.com</a>
                 </h2-->
                 <div style="text-align:right;padding: 13px 0;">
-                    <i class="email"></i><a href="mailto:projects@snnbuilders.com">projects@snnbuilders.com</a>
+                    <i class="email"></i><a href="mailto:<?php echo $ThemeOption['title']; ?>"><?php echo $ThemeOption['title']; ?></a>
                 </div>
             </div>
 

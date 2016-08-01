@@ -1,13 +1,20 @@
 <!-- Footer Bottom -->
 <footer>
+    <div class="container">
+        <?php
+
+        wp_nav_menu( array( 'menu'=>'Footer Menu', 'menu_class'=>'clearfix', 'container'=>"div" ) );
+
+        ?>
+    </div>
     <div id="footer-bottom" class="container">
 
         <div class="row">
             <div class="span6">
-                <p class="copyright">Copyright � 2015. All Rights Reserved.</p>
+                <p class="copyright">Copyright &copy; <?php echo date("Y") ?>. All Rights Reserved.</p>
             </div>
             <div class="span6">
-                <p class="designed-by"> Design by <a target="_blank" href="http://videohut.org/">videohut</a></p> </div>
+                <p class="designed-by"> Powered By <a target="_blank" href="https://dhakawebhost.com">Dhaka Web Host</a></p> </div>
         </div>
 
     </div>

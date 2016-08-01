@@ -7,6 +7,8 @@
  */
 
 
+include_once "inc/settings_page.php";
+
 add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
 
@@ -18,3 +20,6 @@ if ( function_exists( 'register_nav_menus' ) ) {
         )
     );
 }
+
+if( is_admin() )
+    $my_settings_page = new settings_page();

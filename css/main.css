@@ -3124,18 +3124,20 @@ table {
   background-color: transparent;
 }
 table th {
-  border-width: 1px;
+  border-width: 0px;
   padding: 5px;
   border-style: solid;
   border-color: #cecece;
   background-color: white;
 }
 table td {
-  border-width: 1px;
+  border-width: 0px;
   padding: 5px;
   border-style: solid;
   border-color: #cecece;
   background-color: white;
+  vertical-align: top;
+  text-align: left;
 }
 
 /*------------------------------------------------------*/
@@ -5602,7 +5604,7 @@ p.error {
     padding: 25px 11px;
   }
 
-  /*-----------------------------------------------------------------------------------*/
+  /*--------------------------------------------------------------------------©---------*/
   /*	Contact Page Styles
   /*-----------------------------------------------------------------------------------*/
   .contact-page .contact-form {
@@ -5629,3 +5631,47 @@ p.error {
 .fb_bg{ background:#224c85;}
 .yt_bg{ background:#cb2525;}
 .ver_height_4{height:40px;}
+
+
+.flex-caption {
+  width: 96%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
+
+
+.menu-footer-menu-container {
+  padding-top: 30px;
+}
+.menu-footer-menu-container ul {
+  font-family: Arial, Verdana;
+  font-size: 14px;
+  line-height:22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align:center;
+}
+.menu-footer-menu-container ul li {
+  display: block;
+  float: left;
+  position:relative;
+}
+.menu-footer-menu-container ul li a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  /*padding: 5px 15px 5px 15px;*/
+  white-space: nowrap;
+  line-height:22px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
