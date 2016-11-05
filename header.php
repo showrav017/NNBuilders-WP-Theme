@@ -51,40 +51,40 @@
 $ThemeOption=get_option('my_option_name');
 ?>
 
-<div class="header-wrapper">
-
-    <div class="container"><!-- Start Header Container -->
-
-        <header id="header" class="clearfix">
-
-            <div id="header-top" class="clearfix">
-
-                <!--h2 id="contact-email">
-                    <i class="email"></i><a href="mailto:projects@snnbuilders.com">projects@snnbuilders.com</a>
-                </h2-->
-                <div style="text-align:right;padding: 13px 0;">
-                    <i class="email"></i><a href="mailto:<?php echo $ThemeOption['title']; ?>"><?php echo $ThemeOption['title']; ?></a>
-                </div>
-            </div>
 
 
-            <!-- Logo -->
-            <div id="logo">
 
-                <a title="Homes" href="index.html">
+
+<div>
+<header id="header" class="clearfix">
+
+<div class="hdr_tp">
+          <div class="lgo"><a title="Homes" href="index.html">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo2.png" alt="Real Estate Property Developers in Bangalore:SNN Builders-Logo"  >
                 </a>
 
                 <div class="tag-line">
                     <span>&nbsp;</span>
                 </div>
-            </div>
+		</div>
+        <div class="mail">
+		  <div>
+                    <i class="email"></i><a href="mailto:<?php echo $ThemeOption['title']; ?>"><?php echo $ThemeOption['title']; ?></a>
+           </div>
+		
+		</div>
 
 
-            <div class="menu-and-contact-wrap">
+
+</div>
+
+
+
+<div class="menu-and-contact-wrap">
 
                 <!-- <h2  class="contact-number"><i class="icon-phone"></i>080 222 65444 <span class="outer-strip"></span></h2>
                   Start Main Menu-->
+			
                 <nav class="main-menu">
                     <div class="menu-main-menu-container">
                         <?php
@@ -94,12 +94,37 @@ $ThemeOption=get_option('my_option_name');
                         ?>
                     </div>
                 </nav><!-- End Main Menu -->
+			</div>
 
-            </div><!-- End .menu-and-contact-wrap -->
+            </header>
+
+</div>
+
+
+<div class="header-wrapper ">
+
+    <div class="container"><!-- Start Header Container -->
+
+        <header id="header" class="clearfix">
+
+            
+
+
+            <!-- End .menu-and-contact-wrap -->
 
         </header>
 
     </div> <!-- End Header Container -->
 
 </div><!-- End Header -->
+
+
+
+
+
+
+
+
+
+
 
