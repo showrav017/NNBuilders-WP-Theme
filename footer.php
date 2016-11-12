@@ -35,7 +35,50 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.selectbox.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.transit.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-twitterFetcher.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/marquee.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/custom2.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var picData = [      //image data（json），param：image（image path），title（image title），link（image link）
+            {
+                image:'https://farm6.staticflickr.com//5598//22763617378_7718151b88.jpg',
+                title:'image title 1',
+                link:'#'
+            },
+            {
+                image:'https://farm6.staticflickr.com//5339//22763617578_2284dcf4b1.jpg',
+                title:'image title 2',
+                link:'#'
+            },
+            {
+                image:'https://farm6.staticflickr.com//5598//22763617378_7718151b88.jpg',
+                title:'image title 3',
+                link:'#'
+            },
+            {
+                image:'https://farm6.staticflickr.com//5339//22763617578_2284dcf4b1.jpg',
+                title:'image title 4',
+                link:'#'
+            },
+            {
+                image:'https://farm6.staticflickr.com//5598//22763617378_7718151b88.jpg',
+                title:'image title 5',
+                link:'#'
+            }]
+
+        // init pit
+        $("#marquePic").picMarque({
+            speed: 60,//scroll speed（ms）
+            errorimg: 'http://www.siaa.org.cn/style/common/nophoto.jpg',//error image path
+            data: picData
+        })
+    });
+
+</script>
+
+
 </body>
 </html>

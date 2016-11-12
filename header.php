@@ -30,6 +30,9 @@
     <!-- Include the bootstrap responsive stylesheet -->
     <link href="<?php echo get_template_directory_uri(); ?>/css/responsive.css" rel="stylesheet" media="all">
 
+    <!-- Include the bootstrap responsive stylesheet -->
+    <link href="<?php echo get_template_directory_uri(); ?>/css/custom.css" rel="stylesheet" media="all">
+
     <!-- Flexslider stylesheet -->
     <link href="<?php echo get_template_directory_uri(); ?>/js/flexslider/flexslider.css" rel="stylesheet" media="all">
 
@@ -42,89 +45,35 @@
     <!-- Include the site main stylesheet -->
     <link href="<?php echo get_template_directory_uri(); ?>/css/main.css" rel="stylesheet" media="all">
 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.picMarque.css">
+
     <!--End of Zopim Live Chat Script-->
 </head>
 <body>
 
-<?php
-
-$ThemeOption=get_option('my_option_name');
-?>
-
-
-
-
-
-<div>
-<header id="header" class="clearfix">
-
-<div class="hdr_tp">
-          <div class="lgo"><a title="Homes" href="index.html">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo2.png" alt="Real Estate Property Developers in Bangalore:SNN Builders-Logo"  >
-                </a>
-
-                <div class="tag-line">
-                    <span>&nbsp;</span>
-                </div>
-		</div>
-        <div class="mail">
-		  <div>
-                    <i class="email"></i><a href="mailto:<?php echo $ThemeOption['title']; ?>"><?php echo $ThemeOption['title']; ?></a>
-           </div>
-		
-		</div>
-
-
-
-</div>
-
-
-
-<div class="menu-and-contact-wrap">
-
-                <!-- <h2  class="contact-number"><i class="icon-phone"></i>080 222 65444 <span class="outer-strip"></span></h2>
-                  Start Main Menu-->
-			
-                <nav class="main-menu">
-                    <div class="menu-main-menu-container">
-                        <?php
-
-                            wp_nav_menu( array( 'menu'=>'Header Menu', 'menu_class'=>'clearfix', 'menu_id'=>'menu-main-menu', 'container'=>"ul" ) );
-
-                        ?>
-                    </div>
-                </nav><!-- End Main Menu -->
-			</div>
-
-            </header>
-
-</div>
-
-
-<div class="header-wrapper ">
-
+<div class="header-wrapper" style="margin-bottom: 25px;">
     <div class="container"><!-- Start Header Container -->
+        <header class="clearfix" id="header">
+            <div class="clearfix" id="header-top">
+                <h2 id="contact-email"><a href="mailto:<?php echo $ThemeOption['title']; ?>"><?php echo $ThemeOption['title']; ?></a></h2>
+            </div>
+            <!-- Logo -->
 
-        <header id="header" class="clearfix">
+            <div id="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo2.png" alt="NN Builders-Logo"  >
+            </div>
 
-            
+            <nav class="main-menu">
+                <div class="menu-main-menu-container">
+                    <?php
+                    wp_nav_menu( array( 'menu'=>'Header Menu', 'menu_class'=>'clearfix', 'menu_id'=>'menu-main-menu', 'container'=>"ul" ) );
+                    ?>
+                </div>
+            </nav>
 
-
-            <!-- End .menu-and-contact-wrap -->
-
+            <!-- End Main Menu --><!-- End .menu-and-contact-wrap -->
         </header>
-
-    </div> <!-- End Header Container -->
-
-</div><!-- End Header -->
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+    <!-- End Header Container -->
+</div>
