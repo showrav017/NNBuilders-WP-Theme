@@ -1,0 +1,22 @@
+{
+  "name": "nnbuilders",
+  "homepage": "https://github.com/showrav017/NNBuilders-WP-Theme",
+  "authors": [
+    "Muhammad Ehsanul Hoque (Home_Windows) <showrav017@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bxslider-4": "^4.2.5",
+    "filterizr": "^1.2.3"
+  }
+}

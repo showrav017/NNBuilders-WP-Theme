@@ -1,3 +1,4 @@
+/*
 $(function () {
     // basic version is: $('div.demo marquee').marquee() - but we're doing some sexy extras
 
@@ -15,3 +16,4 @@ $(function () {
         $(this).data('drag', false);
     });
 });
+*/

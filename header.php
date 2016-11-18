@@ -47,7 +47,7 @@
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.picMarque.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/bxslider-4/dist/jquery.bxslider.min.css">
 
     <!--End of Zopim Live Chat Script-->
 </head>
