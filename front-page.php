@@ -5,29 +5,31 @@
             <div>
                 <div class="mq" style="height: 300px">
                     <h5 style="display: block; background-color: #0d90d1; text-align: center; color: #ffffff; padding: 12px; font-size: 17px; font-weight: bold;">Project Updates</h5>
-                    <marquee behavior="scroll" direction="up" scrollamount="2" height="250" ><p>
-                        <ul>
-                            <li>Ut vestibulum nibh ac diam sollicitudin, blandit consequat purus aliquam.</li>
-                            <li>Donec quis elit ut quam finibus tristique.</li>
-                            <li>Ut a libero ut odio molestie tincidunt ut in libero.</li>
-                            <li>Quisque et velit tincidunt, euismod odio et, sodales ante.</li>
-                            <li>Sed pulvinar diam sed molestie pulvinar.</li>
-                            <li>Ut eget tellus vel magna laoreet fermentum.</li>
-                        </ul>
-                    </p></marquee>
+                    <marquee behavior="scroll" direction="up" scrollamount="2" height="250" >
+                        <p>
+                            <ul>
+                                <?php $loop = new WP_Query( array( 'post_type' => 'project_updates', 'posts_per_page' => 1000, 'post_status' => 'publish' ) ); ?>
+
+                                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                    <li><a href="<?php echo get_permalink() ?>"><?php echo the_title(); ?></a></li>
+                                <?php endwhile; ?>
+                            </ul>
+                        </p>
+                    </marquee>
                 </div>
                 <div class="mq" style="height: 300px">
                     <h5 style="display: block; background-color: #0d90d1; text-align: center; color: #ffffff; padding: 12px; font-size: 17px; font-weight: bold;">Notice</h5>
-                    <marquee behavior="scroll" direction="up" scrollamount="2" height="250" ><p>
-                        <ul>
-                            <li>Ut vestibulum nibh ac diam sollicitudin, blandit consequat purus aliquam.</li>
-                            <li>Donec quis elit ut quam finibus tristique.</li>
-                            <li>Ut a libero ut odio molestie tincidunt ut in libero.</li>
-                            <li>Quisque et velit tincidunt, euismod odio et, sodales ante.</li>
-                            <li>Sed pulvinar diam sed molestie pulvinar.</li>
-                            <li>Ut eget tellus vel magna laoreet fermentum.</li>
-                        </ul>
-                        </p></marquee>
+                    <marquee behavior="scroll" direction="up" scrollamount="2" height="250" >
+                        <p>
+                            <ul class="beTicker">
+                                <?php $loop = new WP_Query( array( 'post_type' => 'notice', 'posts_per_page' => 1000, 'post_status' => 'publish' ) ); ?>
+
+                                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                    <li><a href="<?php echo get_permalink() ?>"><?php echo the_title(); ?></a></li>
+                                <?php endwhile; ?>
+                            </ul>
+                        </p>
+                    </marquee>
                 </div>
             </div>
         </div>
@@ -71,28 +73,24 @@
                 <div class="mq" style="height: 300px">
                     <h5 style="display: block; background-color: #0d90d1; text-align: center; color: #ffffff; padding: 12px; font-size: 17px; font-weight: bold;">Managing Director Message</h5>
                     <marquee behavior="scroll" direction="up" scrollamount="2" height="250" ><p>
-                        <ul>
-                            <li>Ut vestibulum nibh ac diam sollicitudin, blandit consequat purus aliquam.</li>
-                            <li>Donec quis elit ut quam finibus tristique.</li>
-                            <li>Ut a libero ut odio molestie tincidunt ut in libero.</li>
-                            <li>Quisque et velit tincidunt, euismod odio et, sodales ante.</li>
-                            <li>Sed pulvinar diam sed molestie pulvinar.</li>
-                            <li>Ut eget tellus vel magna laoreet fermentum.</li>
-                        </ul>
+                        <?php
+
+
+                        echo get_post_field('post_content', 206);
+
+                        ?>
                         </p>
                     </marquee>
                 </div>
                 <div class="mq" style="height: 300px">
                     <h5 style="display: block; background-color: #0d90d1; text-align: center; color: #ffffff; padding: 12px; font-size: 17px; font-weight: bold;">Director Message</h5>
                     <marquee behavior="scroll" direction="up" scrollamount="2" height="250"><p>
-                        <ul>
-                            <li>Ut vestibulum nibh ac diam sollicitudin, blandit consequat purus aliquam.</li>
-                            <li>Donec quis elit ut quam finibus tristique.</li>
-                            <li>Ut a libero ut odio molestie tincidunt ut in libero.</li>
-                            <li>Quisque et velit tincidunt, euismod odio et, sodales ante.</li>
-                            <li>Sed pulvinar diam sed molestie pulvinar.</li>
-                            <li>Ut eget tellus vel magna laoreet fermentum.</li>
-                        </ul>
+                            <?php
+
+
+                            echo get_post_field('post_content', 206);
+
+                            ?>
                         </p></marquee>
                 </div>
             </div>
@@ -119,80 +117,41 @@
             </div>
 
         </div>
-        <div class="col-sm-9" style="height: 1000px; padding-left: 38px;">
+        <div class="col-sm-9" style="height: 700px; padding-left: 38px;">
             <h5 style="font-size: 17px; font-weight: bold;">Latest News & Events</h5>
             <div class="marquePic">
                 <ul class="bxslider">
-                    <li>
-                        <img src="http://bxslider.com/images/170_200/trees.jpg" />
-                        <span>Hi Dear</span>
-                    </li>
-                    <li>
-                        <img src="http://bxslider.com/images/170_200/tree_root.jpg" />
-                        <span>Hi Dear</span>
-                    </li>
-                    <li><img src="http://bxslider.com/images/170_200/houses.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/hill_road.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/me_trees.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/hill_trees.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/mountain.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/houses.jpg" />
-                        <span>Hi Dear</span></li>
+                    <?php $loop = new WP_Query( array( 'post_type' => 'latest_news_events', 'posts_per_page' => 1000, 'post_status' => 'publish' ) ); ?>
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <li>
+                            <a href="<?php echo get_permalink() ?>"><?php echo the_post_thumbnail( 'full' ); ?></a>
+                            <span><?php echo the_title(); ?></span>
+                        </li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
             <h5 style="font-size: 17px; font-weight: bold;">Our Clients</h5>
             <div class="marquePic">
                 <ul class="bxslider">
-                    <li>
-                        <img src="http://bxslider.com/images/170_200/trees.jpg" />
-                        <span>Hi Dear</span>
-                    </li>
-                    <li>
-                        <img src="http://bxslider.com/images/170_200/tree_root.jpg" />
-                        <span>Hi Dear</span>
-                    </li>
-                    <li><img src="http://bxslider.com/images/170_200/houses.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/hill_road.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/me_trees.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/hill_trees.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/mountain.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/houses.jpg" />
-                        <span>Hi Dear</span></li>
+                    <?php $loop = new WP_Query( array( 'post_type' => 'clients', 'posts_per_page' => 1000, 'post_status' => 'publish' ) ); ?>
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <li>
+                            <a href="<?php echo get_permalink() ?>"><?php echo the_post_thumbnail( 'full' ); ?></a>
+                            <span><?php echo the_title(); ?></span>
+                        </li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
             <h5 style="font-size: 17px; font-weight: bold;">Our Valuable Employees</h5>
             <div class="marquePic">
                 <ul class="bxslider">
-                    <li>
-                        <img src="http://bxslider.com/images/170_200/trees.jpg" />
-                        <span>Hi Dear</span>
-                    </li>
-                    <li>
-                        <img src="http://bxslider.com/images/170_200/tree_root.jpg" />
-                        <span>Hi Dear</span>
-                    </li>
-                    <li><img src="http://bxslider.com/images/170_200/houses.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/hill_road.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/me_trees.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/hill_trees.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/mountain.jpg" />
-                        <span>Hi Dear</span></li>
-                    <li><img src="http://bxslider.com/images/170_200/houses.jpg" />
-                        <span>Hi Dear</span></li>
+                    <?php $loop = new WP_Query( array( 'post_type' => 'employees', 'posts_per_page' => 1000, 'post_status' => 'publish' ) ); ?>
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <li>
+                            <a href="<?php echo get_permalink() ?>"><?php echo the_post_thumbnail( 'full' ); ?></a>
+                            <span><?php echo the_title(); ?></span>
+                        </li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
         </div>

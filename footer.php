@@ -37,6 +37,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/custom2.js"></script>
 
 
 <script type="text/javascript">

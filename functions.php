@@ -35,7 +35,6 @@ function create_posttype() {
                 'singular_name' => __( 'Board of Director' )
             ),
             'public' => true,
-            'has_archive' => true,
             'rewrite' => array('slug' => 'board_of_director'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
@@ -48,7 +47,6 @@ function create_posttype() {
                 'singular_name' => __( 'Projects' )
             ),
             'public' => true,
-            'has_archive' => true,
             'rewrite' => array('slug' => 'projects'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
@@ -61,8 +59,67 @@ function create_posttype() {
                 'singular_name' => __( 'Gallery' )
             ),
             'public' => true,
-            'has_archive' => true,
             'rewrite' => array('slug' => 'gallery'),
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+
+    register_post_type( 'notice',
+        array(
+            'labels' => array(
+                'name' => __( 'Notice' ),
+                'singular_name' => __( 'Notice' )
+            ),
+            'public' => true,
+            'rewrite' => array('slug' => 'notice'),
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+
+    register_post_type( 'project_updates',
+        array(
+            'labels' => array(
+                'name' => __( 'Project Updates' ),
+                'singular_name' => __( 'Project Updates' )
+            ),
+            'public' => true,
+            'rewrite' => array('slug' => 'project_updates'),
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+
+    register_post_type( 'latest_news_events',
+        array(
+            'labels' => array(
+                'name' => __( 'Latest News Events' ),
+                'singular_name' => __( 'Latest News Events' )
+            ),
+            'public' => true,
+            'rewrite' => array('slug' => 'latest_news_events'),
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+
+    register_post_type( 'clients',
+        array(
+            'labels' => array(
+                'name' => __( 'Clients' ),
+                'singular_name' => __( 'Clients' )
+            ),
+            'public' => true,
+            'rewrite' => array('slug' => 'clients'),
+            'supports' => array('title', 'editor', 'thumbnail')
+        )
+    );
+
+    register_post_type( 'employees',
+        array(
+            'labels' => array(
+                'name' => __( 'Employees' ),
+                'singular_name' => __( 'Employees' )
+            ),
+            'public' => true,
+            'rewrite' => array('slug' => 'employees'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
     );
