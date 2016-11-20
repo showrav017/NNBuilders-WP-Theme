@@ -35,6 +35,7 @@ function create_posttype() {
                 'singular_name' => __( 'Board of Director' )
             ),
             'public' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'board_of_director'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
@@ -47,9 +48,15 @@ function create_posttype() {
                 'singular_name' => __( 'Projects' )
             ),
             'public' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'projects'),
-            'supports' => array('title', 'editor', 'thumbnail')
+            'supports' => array('title', 'editor', 'thumbnail'),
         )
+    );
+
+    register_taxonomy('Project Categories',
+        'projects',
+        array('hierarchical'      => true)
     );
 
     register_post_type( 'gallery',
@@ -59,6 +66,7 @@ function create_posttype() {
                 'singular_name' => __( 'Gallery' )
             ),
             'public' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'gallery'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
@@ -71,6 +79,7 @@ function create_posttype() {
                 'singular_name' => __( 'Notice' )
             ),
             'public' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'notice'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
@@ -83,6 +92,7 @@ function create_posttype() {
                 'singular_name' => __( 'Project Updates' )
             ),
             'public' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'project_updates'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
@@ -95,6 +105,7 @@ function create_posttype() {
                 'singular_name' => __( 'Latest News Events' )
             ),
             'public' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'latest_news_events'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
@@ -107,6 +118,7 @@ function create_posttype() {
                 'singular_name' => __( 'Clients' )
             ),
             'public' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'clients'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
@@ -119,6 +131,7 @@ function create_posttype() {
                 'singular_name' => __( 'Employees' )
             ),
             'public' => true,
+            'has_archive' => false,
             'rewrite' => array('slug' => 'employees'),
             'supports' => array('title', 'editor', 'thumbnail')
         )
